@@ -79,3 +79,30 @@ def average(a, b, c)
 end
 
 average(9, 4, 2)
+
+#最終演習
+class Student
+    def initialize(name)
+        @name = name
+    end
+
+    def cal_avg(jap, math, social, science, eng)
+        avg = (jap + math + social + science + eng) / 5
+        return avg
+    end
+
+    def judge(avg)
+        if 60 <= avg
+            result = "passed"
+        else
+            result = "failed"
+        end
+        return result
+    end
+
+    attr_accessor :name
+
+end
+
+a001 = Student.new("yuto")
+puts a001.name, a001.cal_avg(50,60,70,80,90)
