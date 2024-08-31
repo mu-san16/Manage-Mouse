@@ -1,0 +1,21 @@
+<body>
+  <div class="container">
+    <h1>Mouse Database</h1>
+
+    <%= form_with(url: mouseapp_index_path, method: :post, local: true) do |f| %>
+      <div class="form-group">
+        <%= f.label :username, 'ユーザー名' %>
+        <%= f.text_field :username %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, 'パスワード' %>
+        <%= f.password_field :password %>
+      </div>
+
+      <div class="form-group center">
+        <%= f.submit 'ログイン' %>
+      </div>
+    <% end %>
+  </div>
+</body>
